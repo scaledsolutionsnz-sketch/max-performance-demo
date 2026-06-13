@@ -1,112 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Share Your Feedback | Max Performance, Christchurch</title>
-<meta name="description" content="Tell Max Performance how we can do better. Your feedback goes straight to the team." />
-<meta name="theme-color" content="#0b0f16" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231763ff'/%3E%3Ctext x='50' y='72' font-family='Arial Black,Arial' font-size='62' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .fb-wrap { min-height: 100vh; display: grid; place-items: center; background: var(--ink); padding: 110px 20px 60px; position: relative; overflow: hidden; }
-  .fb-wrap::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 50% 0%, rgba(23,99,255,.26), transparent 55%); }
-  .fb-card { position: relative; z-index: 1; background: #fff; border-radius: 22px; max-width: 600px; width: 100%; padding: 44px 40px; box-shadow: var(--shadow); }
-  .fb-card .badge { margin-bottom: 14px; }
-  .fb-card h1 { font-size: clamp(1.8rem, 4.6vw, 2.5rem); margin-bottom: 10px; }
-  .fb-card > p.lead { color: var(--muted); margin-bottom: 26px; }
-  .rating-show { display: flex; gap: 4px; margin-bottom: 22px; }
-  .rating-show svg { width: 26px; height: 26px; color: #d9dee6; }
-  .rating-show svg.on { color: #ffb320; }
-  .back-home { position: absolute; top: 26px; left: 0; right: 0; z-index: 2; text-align:center; }
-  .back-home a { color: rgba(255,255,255,.8); font-weight:600; font-size:14px; display:inline-flex; align-items:center; gap:7px; }
-  .back-home a:hover { color:#fff; }
-  .success { display:none; text-align:center; padding: 20px 0; }
-  .success.show { display:block; }
-  .success .check { width: 76px; height: 76px; border-radius: 50%; background: rgba(23,99,255,.12); color: var(--accent); display:grid; place-items:center; margin: 0 auto 20px; }
-  .success .check svg { width: 38px; height: 38px; }
-  .success h2 { font-size: 1.7rem; margin-bottom: 10px; }
-  .success p { color: var(--muted); margin-bottom: 24px; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | Max Performance, Christchurch</title>
+<meta name="description" content="Private feedback for Max Performance, Christchurch.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="back-home"><a href="index.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back to Max Performance</a></div>
-
-<div class="fb-wrap">
-  <div class="fb-card">
-    <div id="formView">
-      <span class="badge">We want to make it right</span>
-      <h1>Tell us what happened.</h1>
-      <p class="lead">Thanks for being honest. Your feedback comes straight to the team at Max Performance — not posted publicly — so we can put it right.</p>
-      <div class="rating-show" id="ratingShow" aria-label="Your rating"></div>
-      <form id="fbForm" action="https://formsubmit.co/maxwatson2xtra.co.nz" method="POST">
-        <input type="hidden" name="_subject" value="Private feedback — Max Performance website" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="rating" id="ratingField" value="" />
-        <div class="row-2">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@email.co.nz" required />
-          </div>
-        </div>
-        <div class="field">
-          <label for="rating-visible">Your rating</label>
-          <input id="rating-visible" type="text" readonly value="" />
-        </div>
-        <div class="field">
-          <label for="feedback">What could we have done better?</label>
-          <textarea id="feedback" name="feedback" placeholder="Tell us what happened and how we can make it right." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Send feedback
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        </button>
-        <p class="form-note">Goes privately to Max Performance. We'll be in touch.</p>
-      </form>
-    </div>
-
-    <div class="success" id="successView">
-      <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></div>
-      <h2>Thank you</h2>
-      <p>Your feedback has been sent to the team. We genuinely appreciate you taking the time, and we'll do our best to make it right.</p>
-      <a href="index.html" class="btn btn-dark">Back to home</a>
-    </div>
+<body style="background:var(--bone)">
+<div class="rev-wrap">
+  <div class="rev-card">
+    <div class="mark">M</div>
+    <h1>Tell us what happened</h1>
+    <p>Sorry it wasn't five stars. Your feedback comes straight to the workshop so we can put it right.</p>
+    <form class="form" style="text-align:left;background:transparent;border:none;padding:0" action="https://formsubmit.co/info@maxperformance.co.nz" method="POST">
+      <input type="hidden" name="_subject" value="Private feedback from Max Performance website">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="field"><label for="name" style="color:#333">Name (optional)</label><input id="name" name="name" type="text" style="background:#fff;color:#16181c;border-color:var(--line)"></div>
+      <div class="field"><label for="email" style="color:#333">Email (optional)</label><input id="email" name="email" type="email" style="background:#fff;color:#16181c;border-color:var(--line)"></div>
+      <div class="field"><label for="message" style="color:#333">What could we have done better?</label><textarea id="message" name="message" required style="background:#fff;color:#16181c;border-color:var(--line)"></textarea></div>
+      <button class="btn btn--accent" type="submit">Send feedback</button>
+    </form>
+    <a class="back" href="index.html">← Back to home</a>
   </div>
 </div>
-
-<script>
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-    var rating = parseInt(params.get("rating"), 10);
-    if (isNaN(rating) || rating < 1 || rating > 5) rating = 3;
-
-    document.getElementById("ratingField").value = rating;
-    document.getElementById("rating-visible").value = rating + " out of 5 stars";
-
-    var show = document.getElementById("ratingShow");
-    for (var i = 1; i <= 5; i++) {
-      var on = i <= rating ? "on" : "";
-      show.insertAdjacentHTML("beforeend",
-        '<svg class="' + on + '" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg>');
-    }
-
-    // Show success state on submit (FormSubmit still delivers via the POST)
-    var form = document.getElementById("fbForm");
-    form.addEventListener("submit", function () {
-      setTimeout(function () {
-        document.getElementById("formView").style.display = "none";
-        document.getElementById("successView").classList.add("show");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 200);
-    });
-  })();
-</script>
 </body>
 </html>

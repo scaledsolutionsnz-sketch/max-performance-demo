@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leave a Review | Max Performance, Christchurch</title>
-<meta name="description" content="Tell us how we did. Leave Max Performance a review — it only takes a moment." />
-<meta name="theme-color" content="#0b0f16" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231763ff'/%3E%3Ctext x='50' y='72' font-family='Arial Black,Arial' font-size='62' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .rate-wrap { min-height: 100vh; display: grid; place-items: center; background: var(--ink); padding: 120px 20px 60px; position: relative; overflow: hidden; }
-  .rate-wrap::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 50% 0%, rgba(23,99,255,.28), transparent 55%); }
-  .rate-card { position: relative; z-index: 1; background: #fff; border-radius: 22px; max-width: 560px; width: 100%; padding: 48px 40px; text-align: center; box-shadow: var(--shadow); }
-  .rate-card .badge { margin-bottom: 16px; }
-  .rate-card h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); margin-bottom: 12px; }
-  .rate-card p.lead { color: var(--muted); margin-bottom: 30px; }
-  .star-pick { display: flex; justify-content: center; gap: 8px; margin-bottom: 22px; }
-  .star-pick button { background: none; border: 0; cursor: pointer; padding: 4px; line-height: 0; }
-  .star-pick svg { width: 46px; height: 46px; color: #d9dee6; transition: transform .15s var(--ease), color .15s; }
-  .star-pick button:hover svg { transform: scale(1.15); }
-  .star-pick.hot svg { color: #ffb320; }
-  .star-pick button.activeStar svg { color: #ffb320; }
-  .rate-hint { font-size: 13.5px; color: var(--muted); letter-spacing: .04em; min-height: 20px; }
-  .back-home { position: absolute; top: 26px; left: 0; right: 0; z-index: 2; text-align:center; }
-  .back-home a { color: rgba(255,255,255,.8); font-weight:600; font-size:14px; display:inline-flex; align-items:center; gap:7px; }
-  .back-home a:hover { color:#fff; }
-  .powered { margin-top: 26px; font-size: 12px; color: var(--muted); }
-</style>
+<meta name="description" content="Leave a review for Max Performance — performance tuning and auto servicing in Christchurch.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="back-home"><a href="index.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back to Max Performance</a></div>
-
-<div class="rate-wrap">
-  <div class="rate-card">
-    <span class="badge">Max Performance</span>
+<body style="background:var(--bone)">
+<div class="rev-wrap">
+  <div class="rev-card">
+    <div class="mark">M</div>
     <h1>How did we do?</h1>
-    <p class="lead">Tap a star to leave your rating. Your feedback helps us keep the standard high.</p>
-    <div class="star-pick" id="stars">
-      <button data-v="1" aria-label="1 star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg></button>
-      <button data-v="2" aria-label="2 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg></button>
-      <button data-v="3" aria-label="3 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg></button>
-      <button data-v="4" aria-label="4 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg></button>
-      <button data-v="5" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 20.5l1.6-6.8L2 9.1l7-.6z"/></svg></button>
+    <p>Tap a star to rate your experience with Max Performance.</p>
+    <div class="rev-stars" id="revStars" data-google="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID">
+      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
     </div>
-    <div class="rate-hint" id="hint">Select a rating above</div>
-    <p class="powered">You'll be taken to the right place based on your rating.</p>
+    <a class="btn btn--accent" href="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID">Review us on Google</a>
+    <p class="rev-note">Google review link is a placeholder for this demo — we'll connect it to your real Google Business profile.</p>
+    <a class="back" href="index.html">← Back to home</a>
   </div>
 </div>
-
-<script>
-  // 4-5 stars -> Google review; 1-3 stars -> private feedback form
-  var GOOGLE_REVIEW_URL = "https://g.page/r/PLACEHOLDER/review";
-  var stars = document.getElementById("stars");
-  var buttons = Array.prototype.slice.call(stars.querySelectorAll("button"));
-  var hint = document.getElementById("hint");
-  var labels = ["", "We're sorry to hear that", "Let's make it right", "Thanks — how can we improve?", "Great to hear!", "Brilliant — thank you!"];
-
-  function paint(n) {
-    buttons.forEach(function (b, i) { b.classList.toggle("activeStar", i < n); });
-  }
-  buttons.forEach(function (b) {
-    var v = parseInt(b.dataset.v, 10);
-    b.addEventListener("mouseenter", function () { paint(v); hint.textContent = labels[v]; });
-    b.addEventListener("focus", function () { paint(v); hint.textContent = labels[v]; });
-    b.addEventListener("click", function () {
-      paint(v);
-      hint.textContent = labels[v] + " — redirecting…";
-      setTimeout(function () {
-        if (v >= 4) { window.location.href = GOOGLE_REVIEW_URL; }
-        else { window.location.href = "private.html?rating=" + v; }
-      }, 450);
-    });
-  });
-  stars.addEventListener("mouseleave", function () { paint(0); hint.textContent = "Select a rating above"; });
-</script>
+<script src="main.js"></script>
 </body>
 </html>
