@@ -4,27 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leave a Review | Max Performance, Christchurch</title>
-<meta name="description" content="Leave a review for Max Performance — performance tuning and auto servicing in Christchurch.">
+<meta name="robots" content="noindex">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .review-wrap { max-width: 600px; margin: 0 auto; padding: 90px 24px; text-align: center; }
+  .review-wrap .stars { font-size: 40px; letter-spacing: 8px; justify-content: center; display: block; margin: 18px 0 8px; }
+  .review-wrap h1 { font-size: clamp(40px, 8vw, 66px); margin-bottom: 14px; }
+  .review-wrap p { color: var(--muted); margin-bottom: 26px; }
+  .review-card { background: var(--bone); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; }
+  .review-card .btn { width: 100%; margin-bottom: 12px; }
+  .small { font-size: 13px; color: var(--muted); margin-top: 18px; }
+</style>
 </head>
-<body style="background:var(--bone)">
-<div class="rev-wrap">
-  <div class="rev-card">
-    <div class="mark">M</div>
-    <h1>How did we do?</h1>
-    <p>Tap a star to rate your experience with Max Performance.</p>
-    <div class="rev-stars" id="revStars" data-google="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID">
-      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-    </div>
-    <a class="btn btn--accent" href="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID">Review us on Google</a>
-    <p class="rev-note">Google review link is a placeholder for this demo — we'll connect it to your real Google Business profile.</p>
-    <a class="back" href="index.html">← Back to home</a>
+<body>
+<header class="page-hero">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="mark">M</span><b>Max<span>Performance</span></b></a>
+    <a href="index.html" class="back" style="color:var(--accent);font-weight:600;">← Back to site</a>
+  </div>
+</header>
+
+<div class="review-wrap">
+  <span class="eyebrow" style="justify-content:center;">Thanks for choosing us</span>
+  <span class="stars" style="color:var(--accent);">★★★★★</span>
+  <h1>How did we do?</h1>
+  <p>Your feedback keeps the workshop sharp and helps other Christchurch drivers find us. It takes less than a minute.</p>
+  <div class="review-card">
+    <a href="https://www.google.com/search?q=Max+Performance+Christchurch" target="_blank" rel="noopener" class="btn btn-primary">Review us on Google</a>
+    <a href="index.html#contact" class="btn btn-dark">Send feedback privately</a>
+    <p class="small">Google review link is a placeholder — we'll point it to your live Google Business profile.</p>
   </div>
 </div>
-<script src="main.js"></script>
 </body>
 </html>
